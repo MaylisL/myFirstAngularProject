@@ -9,7 +9,7 @@ import { User } from '../models/user.model';
 
 export class UserProfileComponent {
   user: User = new User('Doe','John', 25, '', 'https://randomuser.me/api/portraits/lego/2.jpg', 'photo description');  
-  isHidden: boolean = false;
+  isHidden: boolean = true;
   buttonText: string = "Afficher l'âge";
 
     constructor() {
@@ -20,10 +20,9 @@ export class UserProfileComponent {
       this.isHidden = !this.isHidden ;
 
       if(this.isHidden)  {
-        this.buttonText = "Masquer l'âge"; }
-      else {
         this.buttonText = "Afficher l'âge"; 
-      console.log("blabla");
+      } else {
+        this.buttonText = "Masquer l'âge"; 
       }
     }
 
