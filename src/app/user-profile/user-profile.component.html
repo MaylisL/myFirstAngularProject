@@ -1,0 +1,14 @@
+<div class="card-user-profile">
+    <div class="card-image-container">
+        <img [src]="user.photo" [alt]="user.photoAlt" class="card-image">
+    </div>
+    <div class="card-content-container">
+        <p class="card-firstname">{{ user.firstName }}</p>
+        <p class="card-lastname">{{ user.name }}</p>
+        <p class="card-quote">{{ user.quote }}</p>
+        <input type="text" class="card-input-quote" [(ngModel)]="user.quote">
+        <p class="card-age" *ngIf="isHidden">{{ user.age }}</p>
+        <button class="card-button" (click)="showHideAge()">{{ buttonText }}</button>
+        <!-- <button class="card-button-display-age"></button> -->
+    </div>
+</div>
